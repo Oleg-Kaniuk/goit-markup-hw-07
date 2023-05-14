@@ -48,6 +48,8 @@ ol {
 
 img {
   display: block;
+  /* max-width: 100%;
+  height: auto; */
 }
 
 .list {
@@ -1260,7 +1262,7 @@ img {
     text-align: center;
   }
   .form-input-footer {
-    width: 398px;
+    width: 100%;
   }
   .modal-button-footer {
     margin-top: 16px;
@@ -1381,10 +1383,6 @@ img {
   color: var(--primary-text-color);
 }
 
-/* ======================================================================================================
-========================================    FLEX     ====================================================
-====================================================================================================== */
-
 .portfolio {
   padding-top: 96px;
   padding-bottom: 120px;
@@ -1407,18 +1405,6 @@ img {
   padding-bottom: 12px;
   border: 1px solid #e7e9fc;
   border-radius: 4px;
-}
-
-.collection {
-  display: flex;
-  flex-wrap: wrap;
-}
-.collection-item:not(:nth-child(3n)) {
-  margin-right: 24px;
-}
-
-.collection-item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 48px;
 }
 
 .collection-link {
@@ -1444,6 +1430,57 @@ img {
   margin-bottom: 8px;
 }
 
+@media screen and (max-width: 767px) {
+  .filter {
+    flex-wrap: wrap;
+    row-gap: 16px;
+    justify-content: start;
+    margin-bottom: 48px;
+  }
+  .filter-button {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .portfolio {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .collection-item:not(:last-child) {
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .collection {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .portfolio {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+  .filter {
+    margin-bottom: 64px;
+  }
+  .collection {
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .collection-item:not(:nth-child(3n)) {
+    margin-right: 24px;
+  }
+  .collection-item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 48px;
+  }
+}
 /* ======================================================================================================
 ========================================    OVERLAY      ==========================================
 ====================================================================================================== */
