@@ -637,10 +637,6 @@ img {
 
 /*************************************** FORM FOOTER  ************************************************/
 
-.form-footer {
-  display: flex;
-}
-
 .form-input-footer {
   width: 264px;
   height: 40px;
@@ -663,6 +659,8 @@ img {
   align-items: center;
 
   min-width: 165px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 8px;
   padding-right: 24px;
   padding-bottom: 8px;
@@ -1060,6 +1058,17 @@ img {
   line-height: 1.5;
 }
 
+@media screen and (max-width: 767px) {
+  .section-team-item {
+    width: 264px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section-team-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .section-team {
     display: flex;
@@ -1073,17 +1082,6 @@ img {
     justify-content: center;
     row-gap: 64px;
     column-gap: 24px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .section-team-item {
-    width: 264px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .section-team-item:not(:last-child) {
-    margin-bottom: 72px;
   }
 }
 
@@ -1201,8 +1199,10 @@ img {
   }
 }
 
+/* *************************************************************************************************** */
+
 /* ======================================================================================================
-========================================    FOOTER      =================================================
+========================================     FOOTER      =============================================
 ====================================================================================================== */
 
 .footer {
@@ -1210,8 +1210,8 @@ img {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .footer-container .logo {
@@ -1223,6 +1223,9 @@ img {
 .footer-text {
   display: block;
   max-width: 264px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 
   font-size: 16px;
   line-height: 1.5;
@@ -1230,21 +1233,77 @@ img {
   color: #f4f4fd;
 }
 
-/* ======================================================================================================
-========================================    ICONS      ==================================================
-====================================================================================================== */
-
-.footer-container {
-  display: flex;
-  align-items: baseline;
+.media-container .media-text,
+.subscribe-container .media-text {
+  margin-bottom: 16px;
 }
 
-.webstudio-container {
-  margin-right: 120px;
+.media-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+
+  letter-spacing: 0.02em;
+  color: #ffffff;
 }
 
-.media-container {
-  margin-right: 80px;
+@media screen and (max-width: 767px) {
+  .footer-text {
+    max-width: 268px;
+  }
+  .media-container {
+    margin-top: 72px;
+    margin-bottom: 72px;
+  }
+  .webstudio-container {
+    text-align: center;
+  }
+  .form-input-footer {
+    width: 398px;
+  }
+  .modal-button-footer {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: flex;
+  }
+  .form-footer {
+    display: flex;
+  }
+  .media-text {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .footer-container {
+    padding-left: 108px;
+  }
+  .footer-container {
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer-container {
+    align-items: baseline;
+  }
+  .webstudio-container {
+    margin-right: 120px;
+  }
+  .media-container {
+    margin-right: 80px;
+  }
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .media-list {
@@ -1272,20 +1331,6 @@ img {
 
 .media-list-icon {
   fill: var(--default-icons-color);
-}
-
-.media-container .media-text,
-.subscribe-container .media-text {
-  margin-bottom: 16px;
-}
-
-.media-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-
-  letter-spacing: 0.02em;
-  color: #ffffff;
 }
 
 /* ======================================================================================================
