@@ -103,6 +103,12 @@ img {
   }
 }
 
+@media screen and (min-width: 428px) and (max-width: 767px) {
+  .social-list-open {
+    gap: 56px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .menu {
     display: none;
@@ -143,9 +149,13 @@ img {
 
   .mobile-menu-container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding-top: 80px;
     padding-bottom: 40px;
     padding-left: 40px;
+    padding-right: 40px;
   }
 
   .mobil-menu-open-icon {
@@ -207,7 +217,7 @@ img {
   }
 
   .menu-open {
-    margin-bottom: 284px;
+    margin-bottom: auto;
   }
 
   .menu-contacts-link.tel {
@@ -239,7 +249,7 @@ img {
   .social-list-open {
     display: flex;
     align-items: center;
-    gap: 56px;
+    justify-content: space-between;
     margin-top: 48px;
   }
 
@@ -576,7 +586,7 @@ img {
 
 .modal {
   position: absolute;
-  width: 408px;
+  width: 100%;
   min-height: 576px;
   padding: 72px 24px 24px 24px;
   top: 50%;
@@ -590,10 +600,21 @@ img {
   border-radius: 4px;
 }
 
+@media screen and (min-width: 428px) and (max-width: 767px) {
+  .modal {
+    width: 392px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .modal {
     padding: 72px 16px 24px 16px;
-    width: 392px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
   }
 }
 
@@ -1003,6 +1024,9 @@ img {
 }
 
 @media screen and (max-width: 1157px) {
+  .section.services {
+    display: none;
+  }
   .services-container {
     display: none;
   }
@@ -1157,7 +1181,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 168px;
+  /* width: 168px; */
   height: 88px;
   border: 1px solid var(--default-accent-color);
   border-radius: 4px;
@@ -1176,6 +1200,12 @@ img {
 
 .company-list-icon {
   fill: currentColor;
+}
+
+@media screen and (min-width: 768px) {
+  .company-list-link {
+    width: 168px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1197,7 +1227,10 @@ img {
     column-gap: 16px;
   }
   .company-list-link {
-    width: 190px;
+    max-width: 190px;
+  }
+  .company-list-item {
+    flex-basis: calc((100% - 16px) / 2);
   }
 }
 
