@@ -135,6 +135,10 @@ img {
     top: 0;
     left: 0;
     background-color: var(--primary-bg-color);
+    /* Для затемнення основного контенту під мобільним меню */
+    /* box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.8); */
+    /* Для прокручування модального вікна, коли у ньому переповнений контент */
+    /* overflow-y: scroll; */
 
     opacity: 0;
     visibility: hidden;
